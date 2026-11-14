@@ -1,29 +1,6 @@
-
-class BankAccount:
-
-    def __init__(self, account_number, balance):
-        self.account_number = account_number
-        self.balance = balance
-
-    def deposit(self, amount):
-        if amount <= 0 :
-            raise ValueError("Amount must be positive")
-        self.balance += amount
-
-    def withdraw(self,amount):
-        if amount <= 0 :
-             raise ValueError("Amount must be positive")
-        self.balance -= amount
-        if self.balance < amount :
-            raise ValueError("Insufficient balance")
+from account import BankAccount
         
-class Customer:
-    def __init__(self, firstname, lastname):
-       self.firstname = firstname
-       self.lastname = lastname
 
-account1=BankAccount("1001", 1000000)
-account2=BankAccount("1002", 500000)
 
 def try_it(label, method, amount):
     try:
