@@ -19,3 +19,4 @@ try_it("deposit 300", account.deposit, 300)
 try_it("deposit 0", account.deposit, 0)
 try_it("deposit -500", account.deposit, -500)
 print("final balance:", account.balance)
+assert account.balance == 1000100, "balance is wrong"
