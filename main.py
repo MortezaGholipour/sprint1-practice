@@ -9,8 +9,10 @@ class BankAccount:
         self.balance += amount
 
     def withdraw(self,amount):
-        if self.balance > amount & amount< 0:
-            raise ValueError("Transaction is not success")
+        if self.balance < amount :
+            raise ValueError("Insufficient balance")
+        if amount < 0 :
+            raise ValueError("Amount must be positive")
         self.balance -= amount
 
 
@@ -28,5 +30,5 @@ account2=BankAccount("1002", 500000)
 
 
 print(account1.balance)
-account1.withdraw(500)
+account1.withdraw(0)
 print(account1.balance)
