@@ -1,5 +1,4 @@
 from account import BankAccount
-        
 
 
 def try_it(label, method, amount):
