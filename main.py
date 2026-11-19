@@ -1,4 +1,5 @@
 from account import BankAccount
+from customer import Customer
 
 
 def try_it(label, method, amount):
@@ -9,7 +10,14 @@ def try_it(label, method, amount):
         print(f"{label:20} -> ERROR: {error}")
 
 
-account = BankAccount("1001", 1000000)
+customer = Customer("ali", "rezaei")
+print(customer.full_name())
+account = BankAccount("1001", 1000000, customer)
+account_b = BankAccount("1002", 0, customer)
+customer.firstname = "Reza"
+print(account_b.owner.firstname)
+print(account.owner is account_b.owner)
+print(account.owner.full_name())
 try_it("withdraw 200", account.withdraw, 200)
 try_it("withdraw 99999999", account.withdraw, 99999999)
 try_it("withdraw -5", account.withdraw, -5)
