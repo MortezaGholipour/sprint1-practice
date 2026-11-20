@@ -1,5 +1,6 @@
 from account import BankAccount
 from customer import Customer
+from transaction import Transaction
 
 
 def try_it(label, method, amount):
