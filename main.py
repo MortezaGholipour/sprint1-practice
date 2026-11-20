@@ -19,6 +19,7 @@ customer.firstname = "Reza"
 print(account_b.owner.firstname)
 print(account.owner is account_b.owner)
 print(account.owner.full_name())
+transactions = Transaction("deposit", "amount")
 try_it("withdraw 200", account.withdraw, 200)
 try_it("withdraw 99999999", account.withdraw, 99999999)
 try_it("withdraw -5", account.withdraw, -5)
@@ -28,3 +29,6 @@ try_it("deposit 0", account.deposit, 0)
 try_it("deposit -500", account.deposit, -500)
 print("final balance:", account.balance)
 assert account.balance == 1000100, "balance is wrong"
+print(len(account.transactions))
+for t in account.transactions:
+    print(t.transaction_type, t.amount)

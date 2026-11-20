@@ -1,3 +1,6 @@
+from transaction import Transaction
+
+
 class BankAccount:
     def __init__(self, account_number, balance, owner):
         self.account_number = account_number
@@ -8,7 +11,7 @@ class BankAccount:
         if amount <= 0:
             raise ValueError("Amount must be positive")
         self.balance += amount
-
+        self.trans
     def withdraw(self, amount):
         if amount <= 0:
             raise ValueError("Amount must be positive")

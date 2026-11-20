@@ -8,3 +8,4 @@ class Transaction:
         self.amount = amount
         self.tracking_code = str(uuid.uuid4())
         self.created_at = datetime.now()
+        self.transactions.append = []
